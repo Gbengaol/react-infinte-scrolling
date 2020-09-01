@@ -39,7 +39,7 @@ function App() {
     <div className="w-100">
       <input
         value={query}
-        type="text"
+        type="search"
         onChange={handleSearch}
         placeholder="Search for any book..."
       />
