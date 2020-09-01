@@ -1,0 +1,81 @@
+.card-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-item {
+  min-width: 22%;
+  max-width: 22%;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid black;
+  padding: 8px 12px;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 640px) {
+  .card-layout {
+    gap: 6px;
+  }
+  .card-item {
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+
+.card-item h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-item h4,
+.card-item h5 {
+  text-align: left;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.w-100 {
+  min-width: 100vw;
+  text-align: center;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #ff0014;
+  border-color: #ff0014 transparent #ff0014 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-text {
+  color: #ff0014;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+input {
+  border-radius: 4px;
+  border: 1.5px solid #222;
+  padding: 8px;
+}
