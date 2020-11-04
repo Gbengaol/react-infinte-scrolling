@@ -1,3 +1,32 @@
+body[data-theme="light"] {
+  --colors-primary: #ff0014;
+  --colors-background: white;
+  --text-color: #000;
+  --card-background: rgba(0, 0, 0, 0.75);
+}
+body[data-theme="dark"] {
+  --colors-primary: #faa831;
+  --colors-background: black;
+  --text-color: #fff;
+  --card-background: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 10px auto;
+  overflow-x: hidden;
+  background-color: var(--colors-background);
+}
+
 .card-layout {
   display: flex;
   flex-direction: row;
@@ -12,10 +41,11 @@
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
   padding: 8px 12px;
   border-radius: 0.25rem;
-  box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0.35rem var(--card-background);
+  color: var(--text-color);
 }
 
 @media (max-width: 640px) {
@@ -55,8 +85,9 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 3px solid #ff0014;
-  border-color: #ff0014 transparent #ff0014 transparent;
+  border: 3px solid var(--colors-primary);
+  border-color: var(--colors-primary) transparent var(--colors-primary)
+    transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -69,7 +100,7 @@
 }
 
 .error-text {
-  color: #ff0014;
+  color: var(--colors-primary);
   font-weight: 700;
   text-transform: uppercase;
 }

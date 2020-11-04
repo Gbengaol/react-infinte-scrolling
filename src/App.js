@@ -3,6 +3,7 @@ import useBookSearch from "./custom-hooks/useBookSearch";
 import "./app.css";
 import Card from "./card.component";
 import Loading from "./loading.component";
+import ThemeToggler from "./ThemeToggler/ThemeToggler.component";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -37,6 +38,7 @@ function App() {
   };
   return (
     <div className="w-100">
+      <ThemeToggler />
       <input
         value={query}
         type="search"
